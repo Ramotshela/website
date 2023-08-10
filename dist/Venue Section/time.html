@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Timeslot</title>
+</head>
+
+<body>
+    <h1>Choose Your Timeslot</h1>
+
+    <form id="timeslotForm">
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date" required><br>
+
+        <label for="timeslot">Select Timeslot:</label>
+        <select id="timeslot" name="timeslot" required>
+            <option value="" disabled selected>Select a timeslot</option>
+            <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+            <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
+            <!-- Add more timeslots as needed -->
+        </select><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore.js"></script>
+    <script>
+        // Initialize Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyA_ioxUQo3hZVrH-9SEaE-vBIj3kcNrw_A",
+            authDomain: "project-b8cf2.firebaseapp.com",
+            projectId: "project-b8cf2",
+            storageBucket: "project-b8cf2.appspot.com",
+            messagingSenderId: "979487784937",
+            appId: "1:979487784937:web:d5bb5b6a4202ada164d578",
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        // Get a reference to the Firestore database
+        var db = firebase.firestore();
+
+        // Handle form submission
+        document.getElementById("timeslotForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var selectedDate = document.getElementById("date").value;
+            var selectedTimeslot = document.getElementById("timeslot").value;
+
+            // Add data to Firestore
+            db.collection("userSelections").add({
+                date: selectedDate,
+                timeslot: selectedTimeslot
+            })
+                .then(() => {
+                    console.log("User selection added to Firestore!");
+                    // Clear form after submission
+                    document.getElementById("timeslotForm").reset();
+                })
+                .catch((error) => {
+                    console.error("Error adding user selection: ", error);
+                });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+.bg-image {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(images/reserve.bg.png);
+  background-position: center;
+  height: inherit;
+  background-size: 300px;
+  margin-top: 0;
+  background-color: grey;
+  background-blend-mode: multiply;
+  vertical-align: top;
+  position: absolute;
+}
+form{
+    margin-left: 20px;
+}
+h1{
+    margin-left: 20px;
+}

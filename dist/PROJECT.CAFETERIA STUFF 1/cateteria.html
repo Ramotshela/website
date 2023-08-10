@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="cafeteria.css">
+    <title> create a cafeteria food menu</title>
+
+</head>
+
+<body>
+    <div class="toolbar">
+        <button id="cart-btn">Cart</button>
+        <button id="purchase-history">Purchase History</button>
+        <button id="special-offers">Special Offers</button>
+    </div>
+    <div class="menu">
+        <div class="heading">
+            <h1>cafeteria food</h1>
+            <h3>&mdash;Menu&mdash;</h3>
+        </div>
+
+        <div class="food-items">
+            <img src="./images/burger.jpeg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Burger</h5>
+                    <h5 class="price">R35</h5>
+                </div>
+                <p>We have chicken, beef and also vegan burgers made to your liking</p>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <img src="./images/dagwood sandwich.jpeg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Dagwood sandwich</h5>
+                    <h5 class="price">R55</h5>
+                </div>
+                <p>We have chicken, beef and also vegan burgers made to your liking</p>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class=" food-items">
+            <img src="./images/chips and russian.jpeg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Chips and russian</h5>
+                    <h5 class="price">R45</h5>
+                </div>
+                <P>Get hot,mild and plain chips.</P>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <img src="./images/juice.jpeg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Juice</h5>
+                    <h5 class="price">R15</h5>
+                </div>
+                <P> Apple, Orange,Mango and many more offered.</P>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <img src="./images/milkshake.jpeg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Milkshake</h5>
+                    <h5 class="price">R22</h5>
+                </div>
+                <P> strawberry, banana, oreo, mango also offered in house.</P>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <img src="./images/coke and pepsi.jpeg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Coke and Pepsi</h5>
+                    <h5 class="price">R25</h5>
+                </div>
+                <P>We offer all kinds of drinks,order what you love not what you see</P>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <img src="./images/pap and beef stew.jpeg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Pap and Beefstew</h5>
+                    <h5 class="price">R55</h5>
+                </div>
+                <P>Choose your three sides, we also offer rice and dumpling with beefstew</P>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <img src="./images/pap and chicken.jpeg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Pap and Chicken</h5>
+                    <h5 class="price">R55</h5>
+                </div>
+                <P>Choose your three sides, we also offer rice and dumpling with chicken</P>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+    
+    </div>
+    <section class="history">
+        <h2>Purchase History</h2>
+        <ul class="history-list"></ul>
+    </section>
+    
+    <section class="cart">
+        <h2>Cart</h2>
+        <ul class="cart-items">
+            <!-- Dynamically add cart items here using JavaScript -->
+        </ul>
+        <p class="total">Total: R<span id="cart-total">0.00</span></p>
+        <button id="place-order">Place Order</button>
+    </section>
+    
+
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>

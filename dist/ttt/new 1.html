@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Tutor Services</title>
+    <style>
+         @media (max-width: 768px) {
+                                /* Styles for screens smaller than 768px (e.g., tablets and mobile devices) */
+                               }
+    
+
+    body {
+          background-image: url(https://encrypted-tbn0.gstatic.com/images? 
+                            q=tbn:ANd9GcRq2qogiUqUFJDy4VRSJazBa_b2PGA0Q2t6nW5FbIyhyOc_4E3N&s);
+         }
+
+    header {
+            padding: 20px;
+            background-color: blue;
+            text-align: center;
+           }
+
+    header h1 {
+               color: white;
+               margin: 0;
+              }
+header h2 {
+               color: white;
+               margin: 0;
+              }
+
+    .signup {
+             position: absolute;
+             top: 20px;
+             right: 20px;
+             padding: 10px;
+             background-color: #f9f9f9;
+             text-decoration: none;
+             }
+
+    #profiles {
+               margin: 20px;
+              }
+
+    .profile {
+              border: 1px solid #ccc;
+              padding: 20px;
+              margin-bottom: 20px;
+              display: flex;
+              align-items: center;
+              background-color: #fff;
+              transition: background-color 0.3s;
+              border-radius: 10px; /* Added border-radius */
+              }
+
+    .profile:hover {
+                    background-color: #f9f9f9;
+                   }
+
+    .profile h3 {
+                 margin-top: 0;
+                }
+
+    .profile p {
+                margin-bottom: 10px;
+               }
+
+    .profile img {
+                  margin-right: 40px;
+                  max-width: 200px;
+                 }
+
+    .profile-details {
+                      flex-grow: 1;
+                     }
+
+    .view-profile {
+                   text-decoration: none;
+                   color: blue;
+                   font-weight: bold;
+                  }
+
+    .view-profile:hover {
+                         text-decoration: underline;
+                        }
+
+    .background-checked {
+                         color: green;
+                         font-weight: bold;
+                         margin-top: 10px;
+                        }
+
+    .bio {
+          font-style: italic;
+          color: #555;
+         }
+
+    .ratings {
+              display: flex;
+              align-items: center;
+             }
+
+    .ratings span {
+                   color: gold;
+                  }
+
+    footer {
+            padding: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+            }
+			
+	/* Styles for math tutors */
+
+.profile.math-tutor {
+                     background-color: #2beb1a; /* Coral color */
+                    }
+
+/* Styles for english tutors */
+
+ .profile.english-tutor {
+                         background-color: #f1a009; /* Salmon color */
+                        }
+
+/* Styles for art tutors */
+      .profile.art-tutor {
+                          background-color:  #f1a009; /* Pale green color */
+                         }
+
+/* Styles for physics tutors */
+  .profile.physics-tutor {
+                          background-color: #2beb1a; /* Light blue color */
+                          }
+
+ /* CSS animations for tutor profile entrance */
+    .profile {
+              opacity: 0;
+              animation: fadeInFromLeft 1s ease-in-out forwards;
+             }
+             
+    .profile:nth-child(even) {
+                              animation-name: fadeInFromRight;
+                             }
+
+    @keyframes fadeInFromLeft {
+                               from {
+                                     opacity: 0;
+                                     transform: translateX(-100%);
+                                    }
+                                 to {
+                                     opacity: 1;
+                                     transform: translateX(0);
+                                    }
+                                    }
+
+         @keyframes fadeInFromRight {
+                                     from {
+                                           opacity: 0;
+                                           transform: translateX(100%);
+                                          }
+                                       to {
+                                           opacity: 1;
+                                           transform: translateX(0);
+                                          }
+                                          }
+
+        .scrollable-container {
+            max-height: 500px; /* Adjust the max-height as needed */
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="WhatsApp Image 2023-08-08 at 14.46.37.jpeg" alt="log Image">
+                      <h1>Welcome to the University of Limpopo Tutor Services</h1>
+                      <marquee>
+<h2>“Education is the most powerful weapon which you can use to change the world.”
+                      ― Nelson Mandela_____“Marriage can wait, education cannot.”
+                      ― Khaled Hosseini, A Thousand Splendid Suns____“A good head and good heart are always a formidable combination. But when you add to that a literate             tongue or pen, then you have something very special.”
+                      ― Nelson Mandela____“Education without values, as useful as it is, seems rather to make man a more clever devil.”
+                      ― C.S. Lewis____Education is the passport to the future, for tomorrow belongs to those who prepare for it today.
+                      Malcolm X</h2>
+                     </marquee>
+    <a href="signup.html" class="signup">Sign up as a tutor</a>
+    </header>
+
+    <section id="profiles">
+        <center><h2>Tutors</h2></center>
+
+        <form id="search-form">
+       <input type="text" id="search-input" placeholder="Search tutors...">
+                      <label for="subject-filter">Filter by subject:</label>
+                      <select id="subject-filter">
+                                                <!-- Add more subjects -->
+                      <option value="">All</option>
+                      <option value="Math">Math</option>
+                      <option value="English">English</option>
+                      <option value="Art">Art</option>
+                      <option value="Physics">Physics</option>
+   
+                      </select>
+                      <button type="submit">Search</button>
+        </form>
+        <hr>
+
+        <!-- Scrollable container for Tutor 2 and Tutor 3 -->
+        <h1>Faculty Of Humanities</h1>
+        <div class="scrollable-container">
+            <div class="profile english-tutor">
+                <!-- Tutor 2 content -->
+<div class="profile">
+      <a href="tutor2.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr2XBVBGJ3jaiV7T4a0dLwEg-jhvfPPLBlG6weo4ucrgy8Q3o&s" alt="Tutor 2 Image">
+      </a>
+      <div class="profile-details">
+        <h3>Tutor 2</h3>
+        <p>Subject: English</p>
+        <p>Experience: 3 years</p>
+        <p>Availability: Weekends</p>
+        <p>Rate: R25/hour</p>
+        <p class="bio">I specialize in teaching English grammar, writing, and literature to students of all levels.</p>
+        <a href="tutor2.html" class="view-profile">View Profile</a>
+        <p class="background-checked">Background checked</p>
+        <div class="ratings">
+          <span>&#9733;</span>
+          <span>&#9733;</span>
+          <span>&#9734;</span>
+          <span>&#9734;</span>
+          <span>&#9734;</span>
+        </div>
+      </div>
+</div> 
+            </div>
+
+            <div class="profile art-tutor">
+                <!-- Tutor 3 content -->
+<div class="profile">
+      <a href="https://www.teachme2.com/en-za/tutors/amber-27163">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjNBt2tuGB2NAhEX0pLT3HtA0i4FZ2B-_lQeyCBbC8btW4lInk&s" alt="Tutor 3 Image">
+      </a>
+      <div class="profile-details">
+        <h3>Tutor 3</h3>
+        <p>Subject: Art</p>
+        <p>Experience: 5 years</p>
+        <p>Availability: Monday to Friday</p>
+        <p>Rate: R25/hour</p>
+        <p class="bio">I'm a professional artist and can help students develop their artistic skills in various mediums.</p>
+        <a href="https://www.teachme2.com/en-za/tutors/amber-27163" class="view-profile">View Profile</a>
+        <p class="background-checked">Background checked</p>
+        <div class="ratings">
+          <span>&#9733;</span>
+          <span>&#9733;</span>
+          <span>&#9733;</span>
+          <span>&#9734;</span>
+          <span>&#9734;</span>
+        </div>
+      </div>
+</div> 
+            </div>
+        </div>
+
+        <!-- Scrollable container for Tutor 1 and Tutor 4 -->
+<h1>Faculty Of Science and Agriculture</h1>
+        <div class="scrollable-container">
+            <div class="profile math-tutor">
+                <!-- Tutor 1 content -->
+<div class="profile"> 
+
+      <a href="tutor1.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8n5CD7uYYJAWx4oAPBnemLScmH2CfU2o0RQFrqCFyv230UTo&s" alt="Tutor 1 Image">
+      </a> 
+            <div class="profile-details">
+        <h3>Tutor 1</h3>
+        <p>Subject: Math</p>
+        <p>Experience: 5 years</p>
+        <p>Availability: Monday to Friday</p>
+        <p>Rate: R30/hour</p>
+        <p class="bio">I have a strong background in mathematics and enjoy helping students understand complex concepts.</p>
+        <a href="tutor1.html" class="view-profile">View Profile</a>
+        <p class="background-checked">Background checked</p>
+        <div class="ratings">
+          <span>&#9733;</span>
+          <span>&#9733;</span>
+          <span>&#9733;</span>
+          <span>&#9733;</span>
+          <span>&#9734;</span>
+        </div>
+		<!-- Tutor 1 content -->
+        </div>
+
+      
+      </div>
+            </div>
+
+            <div class="profile physics-tutor">
+                <!-- Tutor 4 content -->
+<div class="profile">
+      <a href="https://www.teachme2.com/en-za/tutors/thulani-28226">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCxaYZbDZJ7GsMWHN7aTkjiIC8eF2d4x8Y50rSlT0uHqjiBkwb&s" alt="Tutor 4 Image">
+      </a>
+      <div class="profile-details">
+                                  <h3>Tutor 4</h3>
+
+                                  <p>Subject: Physics</p>
+
+                                  <p>Experience: 7 years</p>
+
+                                  <p>Availability: Weekends</p>
+
+                                  <p>Rate: R25/hour</p>
+
+                                  <p class="bio">I have a strong background in physics and can help students understand complex concepts through practical examples.</p>
+
+                                  <a href="https://www.teachme2.com/en-za/tutors/thulani-28226" class="view-profile">View Profile</a>
+
+                                  <p class="background-checked">Background checked</p>
+
+                                  <div class="ratings">
+                                                      <span>&#9733;</span>
+                                                      <span>&#9733;</span>
+                                                      <span>&#9733;</span>
+                                                      <span>&#9733;</span>
+                                                      <span>&#9733;</span>
+                                   </div>
+      </div>
+</div> 
+            </div>
+        </div>
+
+        <script>
+           document.addEventListener("DOMContentLoaded", function () {
+    const searchForm = document.getElementById("search-form");
+    const searchInput = document.getElementById("search-input");
+    const subjectFilter = document.getElementById("subject-filter");
+    const profiles = document.querySelectorAll(".profile");
+
+    searchForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const searchTerm = searchInput.value.toLowerCase();
+      const selectedSubject = subjectFilter.value.toLowerCase();
+
+      profiles.forEach(function (profile) {
+        const profileName = profile.querySelector("h3").textContent.toLowerCase();
+        const profileSubject = profile.querySelector(".subject").textContent.toLowerCase();
+
+        if (
+            profileName.includes(searchTerm) &&
+          (selectedSubject === "" || profileSubject === selectedSubject)
+        ) {
+          profile.style.display = "block";
+          }
+          else {
+          profile.style.display = "none";
+               }
+      });
+    });
+  });
+
+/* Trigger animations when the page loads*/
+      profiles.forEach(function (profile, index) {
+                                                  setTimeout(function () {
+                                                  profile.style.animationDelay = `${index * 5.0}s`;
+                                                  profile.style.opacity = 1;
+                                                                         }, 500);
+                                                  });
+                                                  });
+        </script>
+    </section>
+
+    <footer>
+         <marquee><p>&copy; 2023 University of Limpopo Tutor Services. All rights reserved.</p></marquee>
+	         <nav>
+                  <ul>
+                    <li><a href="#profiles">Tutor Profiles</a></li>
+                    <li><a href="https://www.ul.ac.za/index.php?Entity=About%20Us#start">About UL</a></li>
+                    <li><a href="https://www.ul.ac.za/index.php?Entity=Student%20Affairs#start">Student Affairs</a></li>
+                    <li><a href="https://www.ul.ac.za/index.php?Entity=DSU%20Unit#start">Reakgona Disability Centre</a></li>
+                    <li><a href="https://www.ul.ac.za/index.php?Entity=Centre%20Of%20Academic%20Excellence#start">Centre of Academic Excellence</a></li>
+                    <li><a href="https://sits.ul.ac.za/">Student IT Support (SITS)</a></li>
+                    <li><a href="https://www.ul.ac.za/index.php?Entity=Online%20journals#start">Online journals</a></li>
+                  </ul>
+                </nav>
+    </footer>
+</body>
+</html>

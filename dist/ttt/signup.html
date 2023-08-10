@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Tutor Services - Sign Up</title>
+  <style>
+    
+    
+    .signup-form {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    .signup-form label,
+    .signup-form input {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .signup-form button {
+      display: block;
+      margin-top: 10px;
+    }
+    .error-message {
+      color: red;
+    }
+
+.body{
+       color: blue;
+     }
+  </style>
+</head>
+<body>
+  <div class="signup-form">
+    <h2>Sign Up as a Tutor</h2>
+    <form id="signup-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" required>
+      <label for="experience">Experience (years):</label>
+      <input type="number" id="experience" required>
+      <label for="availability">Availability:</label>
+      <input type="text" id="availability" required>
+      <label for="rate">Rate (R/hour):</label>
+      <input type="number" id="rate" required>
+      <label for="bio">Bio:</label>
+      <textarea id="bio" required></textarea>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p class="error-message" id="error-message"></p>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const signupForm = document.getElementById("signup-form");
+      const errorMessage = document.getElementById("error-message");
+
+      signupForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Fetch form data
+        const name = document.getElementById("name").value;
+        const subject = document.getElementById("subject").value;
+        const experience = document.getElementById("experience").value;
+        const availability = document.getElementById("availability").value;
+        const rate = document.getElementById("rate").value;
+        const bio = document.getElementById("bio").value;
+
+        // Basic form validation
+        if (!name || !subject || !experience || !availability || !rate || !bio) {
+          errorMessage.textContent = "Please fill in all fields.";
+          return;
+        }
+
+        // You can send this data to your backend using AJAX or fetch API
+        // Example: Send the data as JSON to a specific endpoint
+        const tutorData = {
+          name: name,
+          subject: subject,
+          experience: experience,
+          availability: availability,
+          rate: rate,
+          bio: bio,
+        };
+
+        // Here, you can make a fetch request to your backend API to save the tutor data
+        // Replace 'YOUR_BACKEND_ENDPOINT' with the actual endpoint URL
+        fetch('YOUR_BACKEND_ENDPOINT', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(tutorData),
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Failed to sign up as a tutor.');
+          }
+          // Do something after successful signup, e.g., show a success message or redirect to a confirmation page
+          alert('You have successfully signed up as a tutor!');
+          signupForm.reset(); // Clear the form after successful signup
+        })
+        .catch(error => {
+          // Handle any error that occurred during signup
+          errorMessage.textContent = error.message || 'Failed to sign up. Please try again later.';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

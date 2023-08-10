@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Page</title>
+  <link rel="stylesheet" href="style.css" href="index.css">
+</head>
+
+<body>
+  
+  <div class="container">
+    
+    <h3>Book a Venue</h3>
+    <form id="booking-form">
+      <input type="email" id="email" placeholder="email">
+      <label for="venue">Select Venue:</label>
+      <select id="venue" name="venue"></select>
+      
+      <label for="timeslot">Select Timeslot:</label>
+      <select id="timeslot" name="timeslot">
+        <option value="07:30-09:10">07:30-09:10</option>
+        <option value="09:20-11:00">09:20-11:00</option>
+        <option value="11:10-12:50">11:10-12:50</option>
+        <option value="13:00-14:40">13:00-14:40</option>
+        <option value="14:50-15:30">14:50-15:30</option>
+        <option value="15:40-17:20">15:40-17:20</option>
+        <option value="17:30-19:10">17:30-19:10</option>
+
+        <br>
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date">
+        <br>
+        <button type="submit">Book Venue</button>
+    </form>
+    <p id="status-message"></p>
+  </div>
+  <script src="mail.js" type="module"></script>
+</body>
+
+</html>
